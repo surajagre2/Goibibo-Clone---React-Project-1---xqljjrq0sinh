@@ -212,7 +212,7 @@
     padding: 16px 18px 15px;
     width: 260px;
 }
-.lfkrPI {
+.from-container-focus1 {
   position: absolute;
   left: -24px;
   top: -29px;
@@ -226,7 +226,7 @@
 {
   margin-left: 260px;
 }
-.lfkrPi {
+.from-container-focus2{
   position: absolute;
   left: -24px;
   top: -29px;
@@ -236,20 +236,15 @@
   border-radius: 8px;
   z-index: 900;
 }
-.dAUhfz {
+.from-container-child-focus1 {
   padding: 29px 24px 16px;
   position: relative;
 }
-.dAUhfZ {
+.from-container-child-focus2 {
   padding: 29px 24px 16px;
   position: relative;
 }
-.gqpBlv {
-  border-top: 1px solid rgb(242, 242, 242);
-  overflow-y: auto;
-  max-height: 448px;
-}
-.hRfNRh {
+.enter-city-from-focus1 {
     font-size: 14px;
     line-height: 18px;
     font-weight: 500;
@@ -261,7 +256,7 @@
     left: 40px;
     top: 30px;
 }
-.hRfNRH {
+.enter-city-from-focus2{
   font-size: 14px;
   line-height: 18px;
   font-weight: 500;
@@ -273,7 +268,7 @@
   left: 40px;
   top: 30px;
 }
-.dAUhfz > input {
+.from-container-child-focus1 > input {
   width: 100%;
   background: rgb(255, 255, 255);
   border: 2px solid rgb(34, 118, 227);
@@ -285,7 +280,7 @@
   padding: 20px 18px;
   font-weight: 500;
 }
-.dAUhfZ > input {
+.from-container-child-focus2 > input {
   width: 100%;
   background: rgb(255, 255, 255);
   border: 2px solid rgb(34, 118, 227);

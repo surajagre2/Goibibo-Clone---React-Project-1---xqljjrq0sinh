@@ -97,18 +97,18 @@ export default function Home() {
         </div>
         <div className="one-way-container">
           <div className="one-way-container-child">
-            <div className={fromcityfocus?"lfkrPI":"from-container"}>
-              <div className={fromcityfocus?"dAUhfz":"from-container-child"}>
-                <span className={fromcityfocus?"hRfNRh":" enter-city-from"}>From</span>
-                <input type="text" className="enter-city bhnHeQ" onFocus={()=>setFromCityFocus(true)} onBlur={()=>setFromCityFocus(false)} placeholder="Enter city or airport"/>
+            <div className={fromcityfocus?"from-container-focus1":"from-container"}>
+              <div className={fromcityfocus?"from-container-child-focus1":"from-container-child"}>
+                <span className={fromcityfocus?"enter-city-from-focus1":"enter-city-from"}>From</span>
+                <input type="text" className="enter-city" onFocus={()=>setFromCityFocus(true)} onBlur={()=>setFromCityFocus(false)} placeholder="Enter city or airport"/>
               </div>
             </div>
           </div>
           <div className="one-way-container-child">
-            <div className={fromcityfocus2?"lfkrPi":"from-container"} id={fromcityfocus?"check":""}>
-                <div className={fromcityfocus2?"dAUhfZ":"from-container-child"}>
-                  <span className={fromcityfocus2?"hRfNRH":" enter-city-from"}>To</span>
-                  <input type="text" className="enter-city bhnHeq" onFocus={()=>setFromCityFocus2(true)} onBlur={()=>setFromCityFocus2(false)} placeholder="Enter city or airport"/>
+            <div className={fromcityfocus2?"from-container-focus2":"from-container"} id={fromcityfocus?"check":""}>
+                <div className={fromcityfocus2?"from-container-child-focus2":"from-container-child"}>
+                  <span className={fromcityfocus2?"enter-city-from-focus2":" enter-city-from"}>To</span>
+                  <input type="text" className="enter-city" onFocus={()=>setFromCityFocus2(true)} onBlur={()=>setFromCityFocus2(false)} placeholder="Enter city or airport"/>
                 </div>
             </div>
           </div>
