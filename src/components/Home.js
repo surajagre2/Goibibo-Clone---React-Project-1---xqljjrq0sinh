@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/App.css";
-import { useState, useEffect } from "react";
+import {useState, useEffect } from "react";
 import From from "./From";
 import To from "./To";
 import Trip from "./Trip";

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import "../styles/App.css";
 import hello from "../Asset/sponsored.png";
 import poster from "../Asset/poster1.jpg";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 export default function FlightImage() {
   return (
     <div>
@@ -15,5 +15,5 @@ export default function FlightImage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

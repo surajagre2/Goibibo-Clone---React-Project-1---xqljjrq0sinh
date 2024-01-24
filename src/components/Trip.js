@@ -1,10 +1,6 @@
 import React from "react";
 import "../styles/Findcity.css";
 import "../styles/App.css";
-import { offerURL } from "./Constrains";
-import { projectID } from "./Constrains";
-import hello from "../Asset/sponsored.png";
-import poster from "../Asset/poster1.jpg";
 import { useState, useEffect } from "react";
 
 export default function Trip() {

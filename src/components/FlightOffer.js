@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/App.css";
 import { projectID } from "./Constrains";
 import { offerURL } from "./Constrains";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 
 export default function FlightOffer() {
   const [offer, setOffer] = useState("ALL");

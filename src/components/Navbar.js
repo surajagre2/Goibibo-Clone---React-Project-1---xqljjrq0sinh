@@ -1,75 +1,77 @@
-import React from 'react'
-import { NavLink,useNavigate,Outlet } from 'react-router-dom'
+import React from "react";
+import { NavLink, useNavigate, Outlet } from "react-router-dom";
 import "../styles/App.css";
 import "../styles/Navbar.css";
 export default function Navbar() {
   return (
-    <div className='nav-container'>
-        <nav className='navbar'>
-            <header className='header'>
-                <div className='logo-container'>
-                    <span className='logo'></span>
-                </div>
-                <ul className='list'>
-                    <li>
-                        <NavLink to="/flights" className='booking list-item'>
-                            <span className='flight-image'></span>
-                            <p className='services'>Flights</p>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/hotels" className='booking list-item'>
-                            <span className='hotels-image'></span>
-                            <p className='services'>Hotels</p>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/trains" className='booking list-item'>
-                            <span className='cab-image'></span>
-                            <p className='services'>Trains</p>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/cabs" className='booking list-item'>
-                            <span className='trains-image'></span>
-                            <p className='services'>Cabs</p>
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/bus" className='booking list-item'>
-                            <span className='bus-image'></span>
-                            <p className='services'>Bus</p>
-                        </NavLink>
-                    </li>
-                    {/* <li>
+    <div className="nav-container">
+      <nav className="navbar">
+        <header className="header">
+          <div className="logo-container">
+            <span className="logo"></span>
+          </div>
+          <ul className="list">
+            <li>
+              <NavLink to="/flights" className="booking list-item">
+                <span className="flight-image"></span>
+                <p className="services">Flights</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/hotels" className="booking list-item">
+                <span className="hotels-image"></span>
+                <p className="services">Hotels</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/trains" className="booking list-item">
+                <span className="cab-image"></span>
+                <p className="services">Trains</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/cabs" className="booking list-item">
+                <span className="trains-image"></span>
+                <p className="services">Cabs</p>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/bus" className="booking list-item">
+                <span className="bus-image"></span>
+                <p className="services">Bus</p>
+              </NavLink>
+            </li>
+            {/* <li>
                         <NavLink to="/holidays" className='booking list-item'>
                             <span className='holidays-image'></span>
                             <p className='services'>Holidays</p>
                         </NavLink>
                     </li> */}
-                </ul>
-                <div className='logincontainer'>
-                    <div>
-                        <div>
-                            <div className='list-item'>
-                                <span className='trips-image'></span>
-                                <div>
-                                    <p id='my-trip-fontsize'>My Trips</p>
-                                    <p className='services manage-booking-text'>Manage Booking</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div className='logincontainerchild'>
-                            <span className='profile-icon'></span>
-                            <div>LOGIN / SIGNUP</div>
-                        </div>
-                    </div>
+          </ul>
+          <div className="logincontainer">
+            <div>
+              <div>
+                <div className="list-item">
+                  <span className="trips-image"></span>
+                  <div>
+                    <p id="my-trip-fontsize">My Trips</p>
+                    <p className="services manage-booking-text">
+                      Manage Booking
+                    </p>
+                  </div>
                 </div>
-            </header>
-        </nav>
-        <Outlet/>
+              </div>
+            </div>
+            <div>
+              <div className="logincontainerchild">
+                <span className="profile-icon"></span>
+                <div>LOGIN / SIGNUP</div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </nav>
+      <Outlet />
     </div>
-  )
+  );
 }
