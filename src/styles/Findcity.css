@@ -1,0 +1,92 @@
+.airport-list-container
+{
+    border-top: 1px solid rgb(242, 242, 242);
+    overflow-y: auto;
+    max-height: 448px;
+    width: 450px;
+}
+.airport-list-container-child
+{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 16px 24px ;
+    cursor: pointer;
+}
+.airport-list-container-child:hover
+{
+    background-color:  rgb(225, 231, 238);
+}
+.image-logo-name-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.airplane-logo
+{
+    width: 30px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;   
+}
+.airplane-logo img{
+    max-width: 100%;
+}
+.airports-name-container
+{
+    flex: 1 1 0%;
+}
+.airports-name-container-child
+{
+    line-height: normal;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(20, 24, 35);
+    margin-bottom: 4px;
+    display: inline-flex;
+    overflow: hidden;
+    max-width: 286px;
+}
+.airport-name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.airport-iata-code
+{
+    padding-left: 2px;
+    font-weight: 400;
+}
+.airport-full-name
+{
+    line-height: normal;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(119, 119, 119); 
+}
+.airport-contry-container
+{
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: flex;
+}
+.airport-IN
+{
+    line-height: normal;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(119, 119, 119);
+    margin-right: 12px;
+}
+.country-flag
+{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    background-image: url("../Asset/FlagIndia.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 27.4978%;
+}
