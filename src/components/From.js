@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import { projectID } from "./Constrains";
 import { useState, useEffect } from "react";
 import "../styles/App.css";
+import MyContext from "../AllContext";
 
 export default function From({
   fromcityfocus,
   setFromCityFocus,
-  city,
-  setCity,
 }) {
+  const {fromcity,setFromCity,fromIATACode,setfromIATACode}=useContext(MyContext);
   const [listofcity, setListOfCty] = useState();
+  const [data,setData]=useState("");
+  const [city,setCity]=useState();
+  const [fullname,setFullName]=useState();
   async function searchCity(e) {
+    setFromCity(e.target.value);
     setCity(e.target.value);
     try {
       let url = `https://academics.newtonschool.co/api/v1/bookingportals/airport?search={"city":"${city}"}`;
@@ -23,17 +27,26 @@ export default function From({
       });
       const da = await response.json();
       setListOfCty(da.data.airports);
+      console.log(listofcity);
     } catch (error) {
       console.log(error);
     }
   }
-  function hello() {
+  function sample(e,item) {
+   
+    setFromCity(item.city);
+    setFullName(item.name);
+    setfromIATACode(item.iata_code);
     setListOfCty(null);
   }
-  function sample(e) {
-    console.log(e);
-    console.log(e.target.innerText);
+  function setFocusValue()
+  {
+    setFromCityFocus(false);
+    setListOfCty(null);
   }
+  useEffect(()=>{
+    console.log(data);
+  },[data])
   return (
     <div>
       <div className="one-way-container-child">
@@ -61,15 +74,16 @@ export default function From({
               onBlur={() => setFromCityFocus(false)}
               onChange={(e) => searchCity(e)}
               placeholder="Enter city or airport"
+              value={fromcity}
             />
+             {!fromcityfocus && <p className="airport-full-namee">{fullname}</p>}
           </div>
           {listofcity != null && (
-            <ul className="airport-list-container" onClick={() => hello()}>
+            <ul className="airport-list-container">
               {listofcity.map((item) => (
-                <li>
+                  <li onClick={(e)=>sample(e,item)}>
                   <div
                     className="airport-list-container-child"
-                    onClick={(e) => sample(e)}
                   >
                     <div className="image-logo-name-container">
                       <span className="airplane-logo">
@@ -79,16 +93,16 @@ export default function From({
                         />
                       </span>
                     </div>
-                    <div className="airports-name-container">
-                      <p className="airports.name-container-child">
+                    <div className="airports-name-container" >
+                    <p className="airports.name-container-child" >
                         <span className="autoCompleteTitle airport-name">
-                          {item.city},{item.coordinates.country}&nbsp;
+                          {item.city},
                         </span>
                         <span className="autoCompleteSubTitle airport-iata-code">
                           {item.iata_code}
                         </span>
-                      </p>
                       <p className="airport-full-name">{item.name}</p>
+                    </p>
                     </div>
                     <div className="airport-contry-container">
                       <span className="airport-IN">IN</span>

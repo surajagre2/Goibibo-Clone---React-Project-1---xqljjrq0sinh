@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { projectID } from "./Constrains";
 import { useState, useEffect } from "react";
 import "../styles/App.css";
+import { json } from "react-router-dom";
+import MyContext from "../AllContext";
 
 export default function To({
   fromcityfocus,
   fromcityfocus2,
   setFromCityFocus2,
-  city,
-  setCity,
-}) {
-  function hello() {
-    setListOfCty(null);
-  }
+})
+ {
+  const {tocity,setToCity,toIATACode,setToIATACode}=useContext(MyContext);
   const [listofcity2, setListOfCty] = useState();
+  const [city,setCity]=useState();
+  const [fullname,setFullName]=useState();
   async function searchCity2(e) {
+    setToCity(e.target.value);
     setCity(e.target.value);
     try {
       let url = `https://academics.newtonschool.co/api/v1/bookingportals/airport?search={"city":"${city}"}`;
@@ -31,13 +33,23 @@ export default function To({
       console.log(error);
     }
   }
-  function hello() {
+  function sample(e,item) {
+    setToCity(item.city);
+    setFullName(item.name);
+    setToIATACode(item.iata_code);
     setListOfCty(null);
   }
-  function sample(e) {
-    console.log(e);
-    console.log(e.target.innerText);
+  function setFocusValue()
+  {
+    setFromCityFocus2(false);
   }
+  function abc()
+  {
+    console.log(city);
+  }
+  useEffect(()=>{
+    abc();
+  })
   return (
     <div>
       <div className="one-way-container-child">
@@ -65,15 +77,18 @@ export default function To({
               type="text"
               className="enter-city"
               onFocus={() => setFromCityFocus2(true)}
-              onBlur={() => setFromCityFocus2(false)}
+              onBlur={() => setFocusValue()}
               onChange={(e) => searchCity2(e)}
               placeholder="Enter city or airport"
+              value={tocity}
+              contentEditable="true"
             />
+            {!fromcityfocus2 && <p className="airport-full-namee">{fullname}</p>}
           </div>
           {listofcity2 != null && (
-            <ul className="airport-list-container" onClick={() => hello()}>
+            <ul className="airport-list-container">
               {listofcity2.map((item) => (
-                <li>
+                <li onClick={(e)=>sample(e,item)}>
                   <div className="airport-list-container-child">
                     <div className="image-logo-name-container">
                       <span className="airplane-logo">

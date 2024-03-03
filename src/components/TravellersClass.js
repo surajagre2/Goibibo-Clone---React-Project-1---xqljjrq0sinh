@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import "../styles/App.css";
+import MyContext from "../AllContext";
 
-export default function TravellersClass({
-  adults,
-  setAdults,
-  children,
-  setChildren,
-  infants,
-  setInfants,
-  passengerClass,
-  setPassengerClass,
-}) {
+export default function TravellersClass() {
+  const {adults,
+    setAdults,
+    children,
+    setChildren,
+    infants,
+    setInfants,
+    passengerClass,
+    setPassengerClass}=useContext(MyContext);
   const [passengerDetails, setPassengerDetails] = useState(false);
   const [economy, setEconomy] = useState(true);
   const [premiumeconomy, setPremiumEconomy] = useState(false);

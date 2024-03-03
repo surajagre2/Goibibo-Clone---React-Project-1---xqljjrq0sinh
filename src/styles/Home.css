@@ -149,7 +149,6 @@
   background: url("../../public/Asset/homebackground.svg"), rgb(242, 242, 242);
   background-size: contain;
   background-repeat: no-repeat;
-  border: 1px solid red;
 }
 .home-heading
 {
@@ -159,7 +158,7 @@
   line-height: 28px;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  margin: 20px 0px;
+  padding: 20px 0px;
 }
 #airport
 {
@@ -207,6 +206,10 @@
 .from-container-child
 {
     border: 2px solid rgb(225, 231, 238);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    flex-direction: column;
     border-radius: 8px;
     height: 75px;
     background: rgb(255, 255, 255);
@@ -332,6 +335,8 @@
   border: none;
   align-self: center;
   font-size: 13px;
+  outline-style: none;
+  border: none;
 }
 .return-date
 {
@@ -397,7 +402,7 @@
     background-color: rgb(255, 255, 255);
     position: absolute;
     left: 40px;
-    top: 30px;
+    top: 20px;
 }
 .enter-city-from-focus2{
   font-size: 14px;
@@ -409,7 +414,7 @@
   background-color: rgb(255, 255, 255);
   position: absolute;
   left: 40px;
-  top: 30px;
+  top: 20px;
 }
 .from-container-child-focus1 > input {
   width: 100%;
@@ -453,7 +458,7 @@
   font-size: 16px;
   font-weight: 500;
   color:black;
-  margin-top: 10px;
+  margin: auto 1px;
   outline-style: none;
   border: none;
 
@@ -513,6 +518,15 @@
     cursor: pointer;
     font-size: 18px;
     color: rgb(34, 118, 227);
+}
+.airport-full-namee
+{
+  line-height: normal;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(119, 119, 119);
+  text-transform: capitalize;
+ 
 }
 .travel-class-container
 {

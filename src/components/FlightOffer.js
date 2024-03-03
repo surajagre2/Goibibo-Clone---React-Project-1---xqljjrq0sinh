@@ -30,7 +30,7 @@ export default function FlightOffer() {
   }
   useEffect(() => {
     getOffer();
-  });
+  },[]);
   return (
     <div>
       <div className="offer-section">

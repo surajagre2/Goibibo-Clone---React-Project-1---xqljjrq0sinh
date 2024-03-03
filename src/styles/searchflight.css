@@ -1,0 +1,63 @@
+.flight-navbar-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    padding: 20px 100px;
+    background-color: rgb(34, 116, 224);
+}
+.fncc
+{
+    width: 22rem;
+    padding-right: 1.2rem;
+    position: relative;
+}
+.fnccb
+{
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 1.2rem;
+    position: relative;
+    top: 10px;
+}
+.heading
+{
+    padding-bottom: 0.5rem;
+    padding-left: 0.2rem;
+    display: flex;
+    opacity: 0.6;
+}
+.fncc-button
+{
+    background-color: rgb(25, 88, 182);
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    height: 3.2rem;
+    padding: 1rem 0.5rem 1.2rem 1rem;
+    line-height: 1.3;
+    border-radius: 0.8rem;
+    flex-direction: row;
+    -webkit-box-align: center;
+
+}
+.update-search
+{
+    background-color: rgb(255, 255, 255);
+    margin-top: 1.5rem;
+    height: 3.2rem;
+    width: 9.6rem;
+    color: rgb(34, 118, 227);
+    border-radius: 10px;
+}
+

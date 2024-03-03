@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { projectID } from "./Constrains";
 import { useState, useEffect } from "react";
 import "../styles/App.css";
+import MyContext from "../AllContext";
 
-export default function Returndate({ returndate, setReturnDate }) {
+export default function Returndate() {
+  const {returndate,setReturnDate}=useContext(MyContext);
   return (
     <div>
       <div className="one-way-container-child">

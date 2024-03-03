@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/App.css";
 import { useState, useEffect } from "react";
-export default function FareType({ faretype, setFareType }) {
+import MyContext from "../AllContext";
+export default function FareType() {
+  const { faretype, setFareType }=useContext(MyContext);
   const [regular, setRegular] = useState(true);
   const [armedforces, setArmedForce] = useState(false);
   const [seniorcitizen, setSeniorCitizen] = useState(false);

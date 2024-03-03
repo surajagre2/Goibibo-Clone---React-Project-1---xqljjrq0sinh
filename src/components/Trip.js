@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/Findcity.css";
 import "../styles/App.css";
 import { useState, useEffect } from "react";
+import MyContext from "../AllContext";
+
 
 export default function Trip() {
   const [oneWay, setOneWay] = useState(true);
   const [roundTrip, setRoundTrip] = useState(false);
   const [multiCity, setMultyTrip] = useState(false);
-  const [trip, setTrip] = useState("one-way");
+  const {trip,setTrip}=useContext(MyContext);
+  
   function tripToggle(e) {
     let q = e.target.value;
     console.log(q);

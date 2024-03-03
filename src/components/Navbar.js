@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate, Outlet } from "react-router-dom";
 import "../styles/App.css";
 import "../styles/Navbar.css";
-export default function Navbar() {
+export default function Navbar({handleRegistration}) {
+  const [checkLogin,setLogin]=useState(true);
+  const [namee,setNamee]=useState();
+  useEffect(()=>{
+   const getToken=sessionStorage.getItem("authToken");
+   if(getToken!=null)
+   {
+    setLogin(false)
+    setNamee(sessionStorage.getItem("userInfo"));
+   }
+  })
+
   return (
     <div className="nav-container">
       <nav className="navbar">
@@ -63,9 +74,9 @@ export default function Navbar() {
               </div>
             </div>
             <div>
-              <div className="logincontainerchild">
+              <div className="logincontainerchild" >
                 <span className="profile-icon"></span>
-                <div>LOGIN / SIGNUP</div>
+                {checkLogin?<div onClick={handleRegistration}>LOGIN / SIGNUP</div>:<p>{`${namee}`}</p>}
               </div>
             </div>
           </div>
