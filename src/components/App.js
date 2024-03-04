@@ -50,8 +50,8 @@ function App() {
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="flights" element={<Home />}></Route>
                 <Route path="trains" element={<Home />}></Route>
-                <Route path="hotels" element={<SignUp />}></Route>
-                <Route path="cabs" element={<SignIn />}></Route>
+                <Route path="hotels" element={<Home />}></Route>
+                <Route path="cabs" element={<Home />}></Route>
                 <Route path="bus" element={<Home />}></Route>
                 <Route path="holidays" element={<Home />}></Route>
                 <Route path="search" element={<SearchFlight />}></Route>

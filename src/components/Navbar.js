@@ -60,7 +60,7 @@ export default function Navbar({handleRegistration}) {
                     </li> */}
           </ul>
           <div className="logincontainer">
-            <div>
+            <div className="manage-trip-container">
               <div>
                 <div className="list-item">
                   <span className="trips-image"></span>
@@ -76,7 +76,7 @@ export default function Navbar({handleRegistration}) {
             <div>
               <div className="logincontainerchild" >
                 <span className="profile-icon"></span>
-                {checkLogin?<div onClick={handleRegistration}>LOGIN / SIGNUP</div>:<p>{`${namee}`}</p>}
+                {checkLogin?<div onClick={handleRegistration} className="login-name">LOGIN / SIGNUP</div>:<p className="login-name">{`${namee}`}</p>}
               </div>
             </div>
           </div>

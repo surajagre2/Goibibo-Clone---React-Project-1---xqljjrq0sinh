@@ -198,3 +198,29 @@
 {
   color: blue;
 }
+.view-fares
+{
+    border-radius: 0.5rem;
+    outline: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    border: none;
+    width: auto;
+    padding: 7px 10px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgb(255, 109, 56);
+}
+.flight-info
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+.flight-detail-container
+{
+  padding: 5px 20px;
+  box-shadow:rgba(0, 0, 0, 0.15) 0px 0px 15px;
+  margin: 10px 20px;
+}

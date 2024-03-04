@@ -1,6 +1,7 @@
 .flight-navbar-container
 {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -20,6 +21,7 @@
 {
     width: 4rem;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,7 +41,7 @@
     background-color: rgb(25, 88, 182);
     color: white;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 500;
     display: block;
     width: 100%;
@@ -56,8 +58,10 @@
     background-color: rgb(255, 255, 255);
     margin-top: 1.5rem;
     height: 3.2rem;
-    width: 9.6rem;
+    width: 200px;
+    font-size: 16px;
     color: rgb(34, 118, 227);
     border-radius: 10px;
+    border: none;
 }
 

@@ -90,7 +90,10 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.manage-trip-container
+{
+  width: 186px;
+}
 .list-item
 {
   margin-left: 10px;
@@ -115,21 +118,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  margin-left: 150px;
   gap: 30px;
  
 }
 .logincontainerchild
 {
+
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border: 2px solid rgb(34, 116, 224);
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   color: rgb(34, 116, 224);
   font-size: 11px;
+  width: 186px;
   font-weight: bold;
+  gap: 10px;
   
 }
 .profile-icon
@@ -141,6 +147,10 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+}
+.login-name
+{
+  font-size: 14px;
 }
 .home-container
 {
