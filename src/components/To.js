@@ -37,19 +37,20 @@ export default function To({
     setToCity(item.city);
     setFullName(item.name);
     setToIATACode(item.iata_code);
+    console.log(item.iata_code);
     setListOfCty(null);
   }
   function setFocusValue()
   {
     setFromCityFocus2(false);
   }
-  function abc()
-  {
-    console.log(city);
-  }
-  useEffect(()=>{
-    abc();
-  })
+  // function abc()
+  // {
+  //   console.log(city);
+  // }
+  // useEffect(()=>{
+  //   abc();
+  // })
   return (
     <div>
       <div className="one-way-container-child">

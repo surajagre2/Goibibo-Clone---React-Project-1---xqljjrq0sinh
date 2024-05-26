@@ -3,7 +3,7 @@ import "../styles/App.css";
 import { useState, useEffect,useContext  } from "react";
 import { useNavigate} from "react-router-dom";
 import MyContext from "../AllContext";
-import { projectID,searchFlightURLData } from "./Constrains";
+import { projectID } from "./Constrains";
 
 export default function FlightSearchButton() {
   const navigate=useNavigate();
@@ -11,8 +11,9 @@ export default function FlightSearchButton() {
     toIATACode,setToIATACode}=useContext(MyContext);
   async function searchFlight()
   {
-      
-      const response = await fetch(`https://academics.newtonschool.co/api/v1/bookingportals/flight?search={source:BLR,destination:DEL}&day=Wed`, {
+      console.log(fromIATACode);
+      console.log(toIATACode);
+      const response = await fetch(`https://academics.newtonschool.co/api/v1/bookingportals/flight?search={"source":"${fromIATACode}","destination":"${toIATACode}"}&day=Mon`, {
       method: "GET",
       headers: {
         projectID: projectID,
@@ -20,8 +21,8 @@ export default function FlightSearchButton() {
       },
     });
     let data=await response.json();
-    setFlightSearchData(data);
-    console.log(flightSearchData);
+    setFlightSearchData(data.data.flights);
+    console.log(data.data.flights);
     navigate("/search");
   }
   return (

@@ -8,7 +8,7 @@ export default function From({
   fromcityfocus,
   setFromCityFocus,
 }) {
-  const {fromcity,setFromCity,fromIATACode,setfromIATACode}=useContext(MyContext);
+  const {fromcity,setFromCity,fromIATACode,setfromIATACode,flightID,setflightID}=useContext(MyContext);
   const [listofcity, setListOfCty] = useState();
   const [data,setData]=useState("");
   const [city,setCity]=useState();
@@ -27,6 +27,7 @@ export default function From({
       });
       const da = await response.json();
       setListOfCty(da.data.airports);
+      console.log(da.data.airports);
       console.log(listofcity);
     } catch (error) {
       console.log(error);
@@ -37,6 +38,8 @@ export default function From({
     setFromCity(item.city);
     setFullName(item.name);
     setfromIATACode(item.iata_code);
+    
+    console.log(item.iata_code)
     setListOfCty(null);
   }
   function setFocusValue()

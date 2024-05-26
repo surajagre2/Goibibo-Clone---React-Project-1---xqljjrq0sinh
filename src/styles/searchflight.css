@@ -16,6 +16,7 @@
     width: 22rem;
     padding-right: 1.2rem;
     position: relative;
+    color: white;
 }
 .fnccb
 {
@@ -64,4 +65,102 @@
     border-radius: 10px;
     border: none;
 }
-
+.flight-duration
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow:rgba(0, 0, 0, 0.15) 0px 0px 4px;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  
+}
+.flight-duration-child
+{
+    width: 193px;
+    height: 50px;
+    text-align: center;
+    padding-top: 15px;
+    border-right: 1px solid rgb(218, 222, 227);
+    cursor: pointer;
+}
+.flights-display2
+{
+    width: 75%;
+    background: rgb(218, 222, 227);
+}
+.flights-display1
+{
+    width: 25%;
+    margin: 20px 0px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow:rgba(0, 0, 0, 0.15) 0px 0px 4px;
+    height: 350px;
+}
+.flights-display
+{
+    display: flex;
+    background: rgb(218, 222, 227);
+    padding: 10px 50px;
+}
+.filters
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1px solid rgb(240, 240, 240);
+}
+.filters-head
+{
+    font-size: 18px;
+}
+.total-flights
+{
+    color: rgb(113, 113, 113);
+    margin-top: 5px;
+    font-size: 12px;
+}
+.fil-reset-btn
+{
+    cursor: default;
+    color: rgb(142, 147, 171);
+    opacity: 0.3;
+    font-weight: 500;
+}
+.departure
+{
+    padding: 20px 20px 0px;
+}
+.departure-head
+{
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+.depatrute-timing
+{
+    display: flex;
+    justify-content: space-between;
+}
+.depatrute-timing-child
+{
+    background: rgb(218, 222, 227);
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.price-input
+{
+    color: orange;
+    width: 100%;
+   
+}
+.flight-details
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+    color: blue;
+    cursor: pointer;
+}
